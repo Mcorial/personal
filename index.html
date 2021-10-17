@@ -7,6 +7,7 @@
     <title>Robert Piotrowski</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://wallet.duinocoin.com/css/bulma-prefers-dark.min.css" type="text/css">
+    <script src="https://wallet.duinocoin.com/js/fontawesome.js"></script>
     <style>
     .link {
         color: #6369D1;
@@ -19,7 +20,8 @@
         transition: 0.5s;
     }
 
-    .link:hover {
+    .link:hover,
+    .social {
         color: #0090C1;
         background-size: 100% 2px;
     }
@@ -31,20 +33,22 @@
         display: inline-block;
     }
 
-    .rotate {
-        transition: all 0.25s ease-in-out 0s;
+    .rotate,
+    .social {
+        transition: all 0.2s ease-in-out 0s;
     }
 
     .rotate:hover {
         cursor: default;
         transform: rotate(360deg);
         transition: all 0.5s ease-in-out 0s;
+
     }
 
     #nick {
         float: right;
         display: inline-block;
-        animation: popin 1.5s ease-in-out infinite;
+        animation: popin 2.5s ease-in-out infinite;
     }
 
     .imgshadow {
@@ -60,17 +64,12 @@
     }
 
     p {
-        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
     }
 
     @media (prefers-color-scheme: light) {
         html {
             background-color: #FBF7F4;
-        }
-
-        span,
-        p {
-            color: #2d3436;
         }
 
         .heading {
@@ -79,8 +78,8 @@
     }
 
     @media (prefers-color-scheme: dark) {
-        html {
-            background-color: ;
+        .heading {
+            color: #fbfbfb;
         }
     }
 
@@ -100,15 +99,20 @@
 
     @keyframes popin {
 
-        25%,
-        100% {
+        10%,
+        40% {
             transform: translate(0px, 0px);
 
         }
 
         50%,
-        75% {
+        60% {
             transform: translate(0px, -1.5em);
+        }
+
+        70%,
+        90% {
+            transform: translate(0px, -3em);
         }
     }
 
@@ -155,9 +159,42 @@
                                 <p class="subtitle">
                                     <div id="nick_container">
                                         also known as <b>revox</b>
-                                        <span class="has-text-weight-light" id="nick">svko<br>here</span>
+                                        <span class="has-text-weight-light" id="nick">svko<br>here<br>96</span>
                                     </div>
                                 </p>
+                                <div class="content">
+                                    <a href="https://github.com/revoxhere" class="social lightshadow">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://www.instagram.com/revox.here/" class="social lightshadow">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://www.youtube.com/c/reVox96/" class="social lightshadow">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://discordapp.com/users/599482890321133580" class="social lightshadow">
+                                        <i class="fab fa-discord"></i>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://twitter.com/revox_here" class="social lightshadow">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://steamcommunity.com/id/revoxxxhere/" class="social lightshadow">
+                                        <i class="fab fa-steam"></i>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://www.reddit.com/user/reVox96" class="social lightshadow">
+                                        <i class="fab fa-reddit"></i>
+                                    </a>
+                                    &nbsp;
+                                    <a href="mailto:robik123.345@gmail.com" class="social lightshadow">
+                                        <i class="fa fa-at"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -199,7 +236,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="column">
+                                    <div class="column is-full">
                                         <div class="columns is-mobile">
                                             <div class="column">
                                                 <span>JS</span>
@@ -219,7 +256,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="column">
+                                    <div class="column is-full">
                                         <div class="columns is-mobile">
                                             <div class="column">
                                                 <span>NODE.JS</span>
@@ -235,13 +272,23 @@
                                                 <span>C/C++</span>
                                             </div>
                                             <div class="column">
-                                                <progress class="progress is-primary mt-1" value="15" max="100">15%</progress>
+                                                <progress class="progress is-primary mt-1" value="20" max="100">20%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-full">
+                                        <div class="columns is-mobile">
+                                            <div class="column">
+                                                <span>RUBY</span>
+                                            </div>
+                                            <div class="column">
+                                                <progress class="progress is-primary mt-1" value="5" max="100">5%</progress>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <small>Note that I'm <b>nowhere near good</b> in programming but I <b>really enjoy creating new things</b>.</small>
+                                    Note that I'm <b>nowhere near good</b> in programming but I just <b>really enjoy creating new things</b>.
                                 </div>
                             </div>
                         </div>
@@ -336,22 +383,22 @@
     </section>
 </body>
 <script>
-/* totally not borrowed from kristians page */
 const day = 24 * 60 * 60 * 1000;
+const age = document.getElementById("age");
 
-function round_to(precision, value) {
+round_to = function(precision, value) {
     value = parseFloat(value);
     power_of_ten = 10 ** precision;
     return Math.round(value * power_of_ten) / power_of_ten;
 }
 
-daysBetweenDates = function(d1, d2) {
+day_diff = function(d1, d2) {
+    /* totally not borrowed from kristians page */
     return (d2 - Date.parse(d1)) / day;
 }
 
 function update_age() {
-    document.getElementById("age")
-        .innerHTML = round_to(8, daysBetweenDates('Jan 26, 2004 13:25:00', new Date()) / 365);
+    age.innerHTML = round_to(8, day_diff('Jan 26, 2004 13:25:00', new Date()) / 365);
 }
 
 update_age();
