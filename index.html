@@ -1,1 +1,363 @@
-.gitkeep
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Robert Piotrowski</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://wallet.duinocoin.com/css/bulma-prefers-dark.min.css" type="text/css">
+    <style>
+    .link {
+        color: #6369D1;
+        text-decoration: none;
+        background-image: linear-gradient(90deg, #0090C1, #6369D1, #0090C1);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: 0% 2px;
+        transition: background-size 400ms ease-in-out;
+        transition: 0.5s;
+    }
+
+    .link:hover {
+        color: #0090C1;
+        background-size: 100% 2px;
+    }
+
+
+    #nick_container {
+        height: 1.3em;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .rotate {
+        transition: all 0.25s ease-in-out 0s;
+    }
+
+    .rotate:hover {
+        cursor: default;
+        transform: rotate(360deg);
+        transition: all 0.5s ease-in-out 0s;
+    }
+
+    #nick {
+        float: right;
+        display: inline-block;
+        animation: popin 1.5s ease-in-out infinite;
+    }
+
+    .imgshadow {
+        -webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.6));
+        -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=2, OffY=2, Color='#444')";
+        filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=2, OffY=2, Color='#444')";
+    }
+
+    .lightshadow {
+        -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+        -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222')";
+        filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222')";
+    }
+
+    p {
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (prefers-color-scheme: light) {
+        html {
+            background-color: #FBF7F4;
+        }
+
+        span,
+        p {
+            color: #2d3436;
+        }
+
+        .heading {
+            color: #1e272e;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html {
+            background-color: ;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        html {
+            zoom: 1.5;
+        }
+
+        .avatar {
+            margin-left: auto !important;
+        }
+    }
+
+    .heading {
+        margin-bottom: 0.5em !important;
+    }
+
+    @keyframes popin {
+
+        25%,
+        100% {
+            transform: translate(0px, 0px);
+
+        }
+
+        50%,
+        75% {
+            transform: translate(0px, -1.5em);
+        }
+    }
+
+    @-moz-keyframes rotate {
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+
+    @-webkit-keyframes rotate {
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes rotate {
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered is-vcentered">
+                <div class="column has-text-right">
+                    <div class="columns is-multiline is-centered">
+                        <div class="column is-full">
+                            <figure class="image is-128x128 avatar">
+                                <img class="is-rounded imgshadow" src="assets/revox.jpg">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="columns is-multiline is-centered">
+                        <div class="column is-full">
+                            <div>
+                                <p class="heading mb-0"><b>Hey</b>, I'm</p>
+                                <p class="title"><b>Robert</b> <span class="has-text-weight-light">Piotrowski</span></p>
+                                <p class="subtitle">
+                                    <div id="nick_container">
+                                        also known as <b>revox</b>
+                                        <span class="has-text-weight-light" id="nick">svko<br>here</span>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns mb-0 mt-3 is-gapless">
+                <div class="column"></div>
+                <div class="column has-text-right-desktop mr-5">
+                    <div class="columns is-multiline is-centered">
+                        <div class="column is-full">
+                            <div>
+                                <p class="heading mb-0 is-size-6">ABOUT <b>ME</b></p>
+                                <div class="content">
+                                    I'm a <b id="age"></b> year old IT and electronics enthusiast living near <b>Bydgoszcz</b>, <b>Poland</b>. I finished primary school in 2019 with quite good results and I'm now learning as <b>electronics technician</b> in the <b>#1 school in my voivodeship</b>.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-full">
+                            <div>
+                                <p class="heading mb-0 is-size-6"><b>LANGUAGES</b> I KNOW</p>
+                                <div class="columns is-multiline">
+                                    <div class="column is-full">
+                                        <div class="columns is-mobile">
+                                            <div class="column">
+                                                <span>HTML</span>
+                                            </div>
+                                            <div class="column">
+                                                <progress class="progress is-primary mt-1" value="80" max="100">80%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-full">
+                                        <div class="columns is-mobile">
+                                            <div class="column">
+                                                <span>CSS</span>
+                                            </div>
+                                            <div class="column">
+                                                <progress class="progress is-primary mt-1" value="40" max="100">40%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="columns is-mobile">
+                                            <div class="column">
+                                                <span>JS</span>
+                                            </div>
+                                            <div class="column">
+                                                <progress class="progress is-primary mt-1" value="55" max="100">55%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-full">
+                                        <div class="columns is-mobile">
+                                            <div class="column">
+                                                <span>PYTHON</span>
+                                            </div>
+                                            <div class="column">
+                                                <progress class="progress is-primary mt-1" value="85" max="100">85%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="columns is-mobile">
+                                            <div class="column">
+                                                <span>NODE.JS</span>
+                                            </div>
+                                            <div class="column">
+                                                <progress class="progress is-primary mt-1" value="40" max="100">40%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-full">
+                                        <div class="columns is-mobile">
+                                            <div class="column">
+                                                <span>C/C++</span>
+                                            </div>
+                                            <div class="column">
+                                                <progress class="progress is-primary mt-1" value="15" max="100">15%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <small>Note that I'm <b>nowhere near good</b> in programming but I <b>really enjoy creating new things</b>.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="columns is-multiline is-centered">
+                        <div class="column is-full">
+                            <p class="heading mb-0 is-size-6"><b>Projects</b> I've made</p>
+                            <div class="columns is-multiline">
+                                <div class="column is-full">
+                                    <img class="icon icon-text lightshadow rotate" src="https://magi.duinocoin.com/images/duco.png">
+                                    <a class="link" href="https://duinocoin.com">
+                                        duinocoin.com
+                                    </a>
+                                    - website for my <b>eco-friendly</b> coin
+                                </div>
+                                <div class="column is-full">
+                                    <img class="icon icon-text lightshadow rotate" src="https://wallet.duinocoin.com/assets/duco.svg">
+                                    <a class="link" href="https://wallet.duinocoin.com">
+                                        wallet.duinocoin.com
+                                    </a>
+                                    - online wallet for Duino - the <b>go-to place for every DUCO user</b>
+                                </div>
+                                <div class="column is-full">
+                                    <img class="icon icon-text lightshadow rotate" src="https://wallet.duinocoin.com/assets/magi.png">
+                                    <a class="link" href="https://magi.duinocoin.com">
+                                        magi.duinocoin.com
+                                    </a>
+                                    - web wallet & explorer for <b>Magi</b>, a decentralized cryptocurrency
+                                </div>
+                                <div class="column is-full">
+                                    <img class="icon icon-text lightshadow rotate" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco-alt.png?raw=true">
+                                    <a class="link" href="https://github.com/revoxhere/duino-coin">
+                                        Duino-Coin core
+                                    </a>
+                                    - a centralized coin that can be mined with almost everything, including <b>Arduino boards</b>
+                                </div>
+                                <div class="column is-full">
+                                    <img class="icon icon-text lightshadow rotate" src="https://github.com/revoxhere/magi-webservices/raw/main/images/magi2021_light.png">
+                                    <a class="link" href="https://github.com/revoxhere/magi-rest-api">
+                                        Magi REST/RPC API
+                                    </a>
+                                    - (first!) <b>Python library</b> and a (public!) Flask app
+                                </div>
+                                <div class="column is-full">
+                                    <span class="icon icon-text rotate">⬇️</span>
+                                    <a class="link" href="https://github.com/revoxhere/Pretty-YouTube-Downloader">
+                                        Pretty YouTube Downloader
+                                    </a>
+                                    - a simple YouTube downloader
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-full">
+                            <div>
+                                <p class="heading mb-0 is-size-6">PROJECTS I"VE <b>CONTRIBUTED</b> TO</p>
+                                <div class="content">
+                                    <ul>
+                                        <li>
+                                            <a class="link" href="https://github.com/Bilaboz/duino-coin-pools">
+                                                duino-coin-pools
+                                            </a> - node.js mining nodes for Duino
+                                        </li>
+                                        <li>
+                                            <a class="link" href="https://github.com/Bilaboz/duino-stats">
+                                                duino-stats
+                                            </a> - node.js Discord bot for Duino
+                                        </li>
+                                        <li>
+                                            <a class="link" href="https://github.com/primitt/duino-stats-mini">
+                                                duino-stats-mini
+                                            </a> - Python Discord bot for Duino
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column"></div>
+            </div>
+            <div class="columns is-gapless mt-5">
+                <div class="column has-text-right-desktop">
+                    <div class="columns is-multiline is-centered">
+                        <div class="column is-full mr-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+/* totally not borrowed from kristians page */
+const day = 24 * 60 * 60 * 1000;
+
+function round_to(precision, value) {
+    value = parseFloat(value);
+    power_of_ten = 10 ** precision;
+    return Math.round(value * power_of_ten) / power_of_ten;
+}
+
+daysBetweenDates = function(d1, d2) {
+    return (d2 - Date.parse(d1)) / day;
+}
+
+function update_age() {
+    document.getElementById("age")
+        .innerHTML = round_to(8, daysBetweenDates('Jan 26, 2004 13:25:00', new Date()) / 365);
+}
+
+update_age();
+setInterval(function() {
+    update_age();
+}, 100)
+</script>
+
+</html>
