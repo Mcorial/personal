@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>MyEcoria | Portefolio</title>
+  <style>
+    body {
+      background-color: #4d4d4d;
+      text-align: center;
+    }
+
+    img.myecoria {
+       border-radius: 500px;
+       width: 500px;
+     }
+
+    h3.des {
+	color: white;
+    }
+
+    div.projet {
+        background-color: white;
+	border-radius: 10px;
+	width: 300px;
+   }
+
+   * {box-sizing: border-box;}
+
+   div.projets {
+        display: inline-block;
+  	vertical-align: middle
+   }
+
+   
+  </style>
+  
+</head>
+<body>
+  <div class="moi">
+      <img src="img/myecorialienpierrictemplate2.png" class="myecoria"/>
+      <h1 class="qsj">Qui suis-je ?</h1>
+      <h3 class="des">Je m'appelle Pierric aussi connu sous le nom de <b>MyEcoria</b> et j'ai <b id="age"></b> ans </h3>
+      <h1 class="qsj">Mes projets: ?</h1>
+   
+  </div>
+
+  <div class="projets">
+	<div class="projet">
+	<div class="title">
+	    <a href=""><h3>DuinoCoin Wallet </h4><img src="img/logo.png" style="width: 50px;" /></3></a>
+	</div>
+	<div class="text" style="border: 10px;">
+	    <p>C'est une simple extension de naviguateur qui vous permez d'aficher votre solde DuinoCoin en un click</p>
+	</div>
+	</br>
+      </div>
+
+      <div class="projet">
+	<div class="title">
+	    <a href=""><h3>DuinoCoin Faucet </h4><img src="img/logo.png" style="width: 50px;" /></3></a>
+	</div>
+	<div class="text" style="border: 10px;">
+	    <p>C'est un faucet duinocoin qui vous permet de découvrir le fonctionnement des blockchains</p>
+	</div>
+	</br>
+      </div>
+  </div>
+
+
+<script>
+const day = 24 * 60 * 60 * 1000;
+const age = document.getElementById("age");
+
+round_to = function(precision, value) {
+    value = parseFloat(value);
+    power_of_ten = 10 ** precision;
+    return Math.round(value * power_of_ten) / power_of_ten;
+}
+
+day_diff = function(d1, d2) {
+    return (d2 - Date.parse(d1)) / day;
+}
+
+function update_age() {
+    age.innerHTML = round_to(8, day_diff('July 12, 2007 00:00:00', new Date()) / 365);
+}
+
+update_age();
+setInterval(function() {
+    update_age();
+}, 100)
+</script>
+</body>
+</html>
