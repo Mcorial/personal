@@ -24,13 +24,37 @@
 	width: 300px;
    }
 
+
    * {box-sizing: border-box;}
 
    div.projets {
         display: inline-block;
-  	vertical-align: middle
+  	vertical-align: middle;
    }
 
+  div.projetsauquelscontrib {
+        display: inline-block;
+  	vertical-align: middle;
+	text-align: center;
+   }
+
+  a.bouton4 {
+	padding: 12px 50px;
+	background: #C9001A;
+	color: #FFFFFF;
+	-webkit-transition: all 1.8s ease-out 0s;
+	-moz-transition: all 1.8s ease-out 0s;
+	transition: all 1.8s ease-out 0s;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	border: 4px dashed #000000;
+  }
+  a.bouton4:hover {
+	background: #8FCF3C;
+	color: #000000;
+	border: 4px solid #34393E;
+ }
    
   </style>
   
@@ -40,30 +64,53 @@
       <img src="img/myecorialienpierrictemplate2.png" class="myecoria"/>
       <h1 class="qsj">Qui suis-je ?</h1>
       <h3 class="des">Je m'appelle Pierric aussi connu sous le nom de <b>MyEcoria</b> et j'ai <b id="age"></b> ans </h3>
-      <h1 class="qsj">Mes projets: ?</h1>
+      
    
   </div>
 
   <div class="projets">
+	<h1 class="qsj">Mes projets: </h1>
 	<div class="projet">
 	<div class="title">
-	    <a href=""><h3>DuinoCoin Wallet </h4><img src="img/logo.png" style="width: 50px;" /></3></a>
+	    <a href=""><h3>DuinoCoin Wallet </h4><img src="img/Illustrations/wallet.svg" style="width: 80px;" /></3></a>
 	</div>
 	<div class="text" style="border: 10px;">
 	    <p>C'est une simple extension de naviguateur qui vous permez d'aficher votre solde DuinoCoin en un click</p>
+	    </br>
+	    <a href="https://github.com/Mcorial/DuinoCoin-Wallet-extension" class="bouton4">GO</a>
 	</div>
 	</br>
       </div>
 
       <div class="projet">
 	<div class="title">
-	    <a href=""><h3>DuinoCoin Faucet </h4><img src="img/logo.png" style="width: 50px;" /></3></a>
+	    <a href=""><h3>DuinoCoin Faucet </h4><img src="img/Illustrations/cadeaux.svg" style="width: 80px;" /></3></a>
 	</div>
 	<div class="text" style="border: 10px;">
 	    <p>C'est un faucet duinocoin qui vous permet de découvrir le fonctionnement des blockchains</p>
+            </br>
+	    <a href="http://s.ddns.net/duinofaucet" class="bouton4">GO</a>
 	</div>
 	</br>
       </div>
+  </div>
+  </br>
+  <div class="projetsauquelscontrib">
+	<h1 class="qsj">QUELQUES PROJETS AUXQUELS J'AI CONTRIBUÉ: </h1>
+	
+      <div class="projet">
+	<div class="title">
+	    <a href=""><h3>DoudouxGaming</h4><img src="img/Illustrations/twitch.svg" style="width: 80px;" /></3></a>
+	</div>
+	<div class="text" style="border: 10px;">
+	    <p>Un des meilleurs créateurs de contenue sur twitch !!!</p>
+            </br>
+	    <a href="" class="bouton4">GO</a>
+	</div>
+	</br>
+      </div>
+
+      
   </div>
 
 
