@@ -115,27 +115,7 @@
 
 
 <script>
-const day = 24 * 60 * 60 * 1000;
-const age = document.getElementById("age");
-
-round_to = function(precision, value) {
-    value = parseFloat(value);
-    power_of_ten = 10 ** precision;
-    return Math.round(value * power_of_ten) / power_of_ten;
-}
-
-day_diff = function(d1, d2) {
-    return (d2 - Date.parse(d1)) / day;
-}
-
-function update_age() {
-    age.innerHTML = round_to(8, day_diff('July 12, 2007 00:00:00', new Date()) / 365);
-}
-
-update_age();
-setInterval(function() {
-    update_age();
-}, 100)
+const day=864e5,age=document.getElementById("age");function update_age(){age.innerHTML=round_to(8,day_diff("July 12, 2007 00:00:00",new Date)/365)}round_to=function(e,t){return t=parseFloat(t),power_of_ten=10**e,Math.round(t*power_of_ten)/power_of_ten},day_diff=function(e,t){return(t-Date.parse(e))/day},update_age(),setInterval(function(){update_age()},100);
 </script>
 </body>
 </html>
