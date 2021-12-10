@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>MyEcoria | Portefolio</title>
+  <link rel="icon" href="img/logo.png" sizes="16x16" type="image/png">
   <style>
     body {
       background-color: #4d4d4d;
@@ -38,6 +39,12 @@
 	text-align: center;
    }
 
+  div.languages {
+        display: inline-block;
+  	vertical-align: middle;
+	text-align: center;
+   }
+
   a.bouton4 {
 	padding: 12px 50px;
 	background: #C9001A;
@@ -55,24 +62,41 @@
 	color: #000000;
 	border: 4px solid #34393E;
  }
+
+  div.contact {
+	padding-left: 50%;
+	border-radius: 10px;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+ }
+  
+ img.imgcontact {
+	border-radius: 50px;
+	width: 50px;
+	height: 50px;
+ }
    
+
   </style>
   
 </head>
 <body>
   <div class="moi">
       <img src="img/myecorialienpierrictemplate2.png" class="myecoria"/>
+      <div class="contact"><a href="https://ko-fi.com/myecoria"><img src="img/co-fi.jpg" class="imgcontact"/></a></div>
       <h1 class="qsj">Qui suis-je ?</h1>
-      <h3 class="des">Je m'appelle Pierric aussi connu sous le nom de <b>MyEcoria</b> et j'ai <b id="age"></b> ans </h3>
+      <h3 class="des">Je m'appelle Pierric aussi connu sous le nom de <b style="color: red;">MyEcoria</b> et j'ai <b id="age" style="color: blue;"></b> ans. Je suis loin d'être fort, je suis juste un passionné</h3>
       
    
   </div>
+
 
   <div class="projets">
 	<h1 class="qsj">Mes projets: </h1>
 	<div class="projet">
 	<div class="title">
-	    <a href=""><h3>DuinoCoin Wallet </h4><img src="img/Illustrations/wallet.svg" style="width: 80px;" /></3></a>
+	    <a href="https://github.com/Mcorial/DuinoCoin-Wallet-extension"><h3>DuinoCoin Wallet </h4><img src="img/Illustrations/wallet.svg" style="width: 80px;" /></3></a>
 	</div>
 	<div class="text" style="border: 10px;">
 	    <p>C'est une simple extension de naviguateur qui vous permez d'aficher votre solde DuinoCoin en un click</p>
@@ -84,7 +108,7 @@
 
       <div class="projet">
 	<div class="title">
-	    <a href=""><h3>DuinoCoin Faucet </h4><img src="img/Illustrations/cadeaux.svg" style="width: 80px;" /></3></a>
+	    <a href="http://s.ddns.net/duinofaucet"><h3>DuinoCoin Faucet </h4><img src="img/Illustrations/cadeaux.svg" style="width: 80px;" /></3></a>
 	</div>
 	<div class="text" style="border: 10px;">
 	    <p>C'est un faucet duinocoin qui vous permet de découvrir le fonctionnement des blockchains</p>
@@ -93,14 +117,17 @@
 	</div>
 	</br>
       </div>
+
+      
   </div>
   </br>
+  </br>
   <div class="projetsauquelscontrib">
-	<h1 class="qsj">QUELQUES PROJETS AUXQUELS J'AI CONTRIBUÉ: </h1>
+	<h1 class="qsj">Contributions: </h1>
 	
       <div class="projet">
 	<div class="title">
-	    <a href=""><h3>DoudouxGaming</h4><img src="img/Illustrations/twitch.svg" style="width: 80px;" /></3></a>
+	    <a href="https://www.twitch.tv/doudouxgamingbzh"><h3>DoudouxGaming</h4><img src="img/Illustrations/twitch.svg" style="width: 80px;" /></3></a>
 	</div>
 	<div class="text" style="border: 10px;">
 	    <p>Un des meilleurs créateurs de contenue sur twitch !!!</p>
@@ -110,12 +137,61 @@
 	</br>
       </div>
 
+	
+
+      
+  </div>
+
+  </br>
+  </br>
+  <div class="languages">
+	<h1 class="qsj">Languages: </h1>
+	
+      <div class="projet">
+	</br>
+	<h3>Python:</h3>
+	<progress value="40" max="100">40 %</progress>
+	</br>
+	<h3>html:</h3>
+	<progress value="30" max="100">30 %</progress>
+	</br>
+	<h3>css:</h3>
+	<progress value="10" max="100">10 %</progress>
+	</br>
+	<h3>Js:</h3>
+	<progress value="3" max="100">3 %</progress>
+	</br>
+	</br>
+      </div>
+
+	
+
       
   </div>
 
 
 <script>
-const day=864e5,age=document.getElementById("age");function update_age(){age.innerHTML=round_to(8,day_diff("July 12, 2007 00:00:00",new Date)/365)}round_to=function(e,t){return t=parseFloat(t),power_of_ten=10**e,Math.round(t*power_of_ten)/power_of_ten},day_diff=function(e,t){return(t-Date.parse(e))/day},update_age(),setInterval(function(){update_age()},100);
+const day = 24 * 60 * 60 * 1000;
+const age = document.getElementById("age");
+
+round_to = function(precision, value) {
+    value = parseFloat(value);
+    power_of_ten = 10 ** precision;
+    return Math.round(value * power_of_ten) / power_of_ten;
+}
+
+day_diff = function(d1, d2) {
+    return (d2 - Date.parse(d1)) / day;
+}
+
+function update_age() {
+    age.innerHTML = round_to(8, day_diff('July 12, 2007 00:00:00', new Date()) / 365);
+}
+
+update_age();
+setInterval(function() {
+    update_age();
+}, 100)
 </script>
 </body>
 </html>
